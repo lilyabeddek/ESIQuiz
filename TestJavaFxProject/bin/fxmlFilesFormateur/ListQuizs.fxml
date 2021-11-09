@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panelStruct" prefHeight="840.0" prefWidth="930.0" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersFormateur.ListQuizsController">
+   <children>
+      <Label layoutX="96.0" layoutY="55.0" text="Liste des Quizs" textFill="#06d585">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="86.0" layoutY="200.0" prefHeight="514.0" prefWidth="753.0">
+         <columns>
+            <TableColumn fx:id="nomQuiz" prefWidth="147.99996948242188" text="Titre" />
+            <TableColumn fx:id="dateOuverture" prefWidth="160.80006408691406" text="Date d'ouverture" />
+            <TableColumn fx:id="dateExpiration" prefWidth="177.5999755859375" text="Date de fermeture" />
+            <TableColumn fx:id="nbQuestions" prefWidth="265.6" text="Nombre de questions" />
+         </columns>
+      </TableView>
+      <Button fx:id="visualiserQuizButton" layoutX="696.0" layoutY="740.0" mnemonicParsing="false" onAction="#visualiserQuiz" prefHeight="32.0" prefWidth="134.0" text="Visualisez le quiz">
+         <styleClass>
+            <String fx:value="action-btn" />
+            <String fx:value="info" />
+         </styleClass></Button>
+      <Button fx:id="creerQuizButton" layoutX="656.0" layoutY="147.0" mnemonicParsing="false" onAction="#creerQuiz" prefHeight="32.0" prefWidth="183.0" style="-fx-background-color: #2eea96; -fx-border-color: #2eea96;" text="+ Creer un nouveau Quiz">
+         <styleClass>
+            <String fx:value="action-btn" />
+            <String fx:value="success" />
+         </styleClass></Button>
+      <Button fx:id="supprimerQuizButton" layoutX="86.0" layoutY="740.0" mnemonicParsing="false" onAction="#supprimerQuiz" prefHeight="32.0" prefWidth="121.0" text="Supprimer">
+         <styleClass>
+            <String fx:value="danger" />
+            <String fx:value="action-btn" />
+         </styleClass></Button>
+      <Button fx:id="modifierQuizButton" layoutX="219.0" layoutY="740.0" mnemonicParsing="false" onAction="#modifierQuiz" prefHeight="32.0" prefWidth="122.0" style="-fx-border-color: #5bc0de; -fx-border-width: 1.5;" styleClass="action-btn" text="Modifier" />
+   </children>
+</AnchorPane>

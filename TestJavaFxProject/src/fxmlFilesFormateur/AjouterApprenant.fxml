@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panelStruct" prefHeight="840.0" prefWidth="929.0" style="-fx-background-color: #ffffff;" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersFormateur.AjouterApprenantController">
+   <children>
+      <Label layoutX="161.0" layoutY="87.0" text="Ajouter un apprenant" textFill="#06d585">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <VBox layoutX="218.0" layoutY="171.0" prefHeight="458.0" prefWidth="522.0">
+         <children>
+            <Label text="Nom :" textFill="#595656">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomField" prefHeight="46.0" prefWidth="407.0" promptText="Nom de l'apprenant">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Prénom :" textFill="#595656">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prenomField" prefHeight="46.0" prefWidth="407.0" promptText="Prénom de l'apprenant">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Date de naissance :" textFill="#595656">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateNaissanceField" prefHeight="42.0" prefWidth="522.0" promptText="JJ / MM /AAAA">
+               <VBox.margin>
+                  <Insets bottom="30.0" top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+            <Label text="Adresse :" textFill="#595656">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="adresseField" prefHeight="46.0" prefWidth="407.0" promptText="Adresse de l'apprenant">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <Button layoutX="415.0" layoutY="629.0" mnemonicParsing="false" onAction="#ajouterApprenant" prefHeight="32.0" prefWidth="147.0" style="-fx-border-color: #5bc0de;" text="Ajouter">
+         <styleClass>
+            <String fx:value="action-btn" />
+            <String fx:value="info" />
+         </styleClass></Button>
+      <Button layoutX="34.0" layoutY="24.0" mnemonicParsing="false" onAction="#revenirEnArriere" prefHeight="32.0" prefWidth="147.0" style="-fx-border-color: #5bc0de;" text="&lt; Revenir en arrière" />
+   </children>
+</AnchorPane>

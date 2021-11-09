@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="115.0" prefWidth="593.0" style="-fx-background-color: #2eea96;" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersFormateur.SuccessMessageController">
+   <children>
+      <Label layoutX="563.0" layoutY="12.0" onMouseClicked="#closeButtonAction" text="X" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="20.0" text="Succès" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" layoutX="100.0" layoutY="47.0" prefHeight="36.0" prefWidth="486.0" text="Succès" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="64.0" fitWidth="66.0" layoutX="22.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../photos/verified.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

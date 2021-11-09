@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panelStruct" prefHeight="830.0" prefWidth="930.0" style="-fx-background-color: #ffffff;" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersFormateur.ActivitesApprenantController">
+   <children>
+      <TableView fx:id="tableView" layoutX="95.0" layoutY="253.0" prefHeight="520.0" prefWidth="766.0">
+        <columns>
+          <TableColumn fx:id="nomColumn" prefWidth="153.2" text="Quiz" />
+          <TableColumn fx:id="dateOuvertureColumn" prefWidth="153.2" text="Date d'ouverture" />
+            <TableColumn fx:id="dateExpirationColumn" prefWidth="153.2" text="Date d'expiration" />
+            <TableColumn fx:id="pAccomplissement" prefWidth="153.2" text="Taux d'accomplissement" />
+            <TableColumn fx:id="pReussite" prefWidth="151.19998779296873" text="Taux de reussite" />
+        </columns>
+      </TableView>
+      <Label layoutX="95.0" layoutY="58.0" text="Consultation de l'activité d'un apprenant :" textFill="#06d585">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="122.0" text="Nom :" textFill="#575454">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="164.0" text="Prénom :" textFill="#575454">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="543.0" layoutY="122.0" text="Date de naissance :" textFill="#575454">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="543.0" layoutY="164.0" text="Adresse :" textFill="#575454">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nomField" layoutX="182.0" layoutY="122.0" text="Nom :" textFill="#161515">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="prenomField" layoutX="182.0" layoutY="164.0" text="Nom :" textFill="#161515">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateNaissanceField" layoutX="708.0" layoutY="121.0" text="Nom :" textFill="#161515">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="adresseField" layoutX="708.0" layoutY="163.0" text="Nom :" textFill="#161515">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="98.0" layoutY="21.0" minWidth="40.0" mnemonicParsing="false" onAction="#revenirEnArriere" prefHeight="32.0" prefWidth="153.0" style="-fx-border-color: #5bc0de;" styleClass="action-btn" text="&lt; Revenir en arrière" />
+   </children>
+</AnchorPane>

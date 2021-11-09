@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="880.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersApprenant.ApprenantHomeController">
+   <children>
+      <HBox layoutY="-1.0" prefHeight="880.0" prefWidth="1240.0">
+         <children>
+            <Pane prefHeight="704.0" prefWidth="341.0" style="-fx-background-color: #06d585 #06d585;">
+               <children>
+                  <ImageView fx:id="profilPicture" fitHeight="171.0" fitWidth="219.0" layoutX="87.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="profilPicture1" fitHeight="119.0" fitWidth="114.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/84142678-green-round-simple-quiz-icon-concept-de-solution-enquête-choix-temps-de-jeu-enquêteur-problème-problème-résolu.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="96.0" layoutY="34.0" text="E s p a c e" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="96.0" layoutY="57.0" text="A p p r e n a n t s" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="login" layoutX="110.0" layoutY="349.0" text="Nom d'utilisateur" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="41.0" layoutY="33.0" text="Esi" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="2.0" layoutY="440.0" mnemonicParsing="false" onAction="#accueil" prefHeight="58.0" prefWidth="340.0" style="-fx-background-color: #06d585;" text="Accueil" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="67.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/home.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="mon_compte" alignment="CENTER" layoutX="-2.0" layoutY="498.0" mnemonicParsing="false" onAction="#monCompte" prefHeight="57.0" prefWidth="340.0" style="-fx-background-color: #06d585;" text="Mon Compte" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="66.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/controls.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="mes_quizs" alignment="CENTER" layoutX="-1.0" layoutY="555.0" mnemonicParsing="false" onAction="#mesQuizs" prefHeight="61.0" prefWidth="340.0" style="-fx-background-color: #06d585;" text="Mes Quizs" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="63.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/question%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="-1.0" layoutY="616.0" mnemonicParsing="false" onAction="#seDeconnecter" prefHeight="58.0" prefWidth="340.0" style="-fx-background-color: #06d585;" text="Se Deconnecter" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="63.0" layoutY="628.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox prefHeight="880.0" prefWidth="901.0">
+               <children>
+                  <Pane opacity="0.98" prefHeight="47.0" prefWidth="709.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Circle fill="#f94344" layoutX="873.0" layoutY="22.0" onMouseClicked="#closeButtonAction" radius="15.0" stroke="#f94344" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Label layoutX="868.0" layoutY="11.0" onMouseClicked="#closeButtonAction" text="X" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Separator prefWidth="200.0" />
+                  <AnchorPane fx:id="homepane" prefHeight="831.0" prefWidth="900.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label layoutX="379.0" layoutY="286.0" text="Esi" textFill="#77d9b3">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="536.0" fitWidth="558.0" layoutX="190.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../photos/QuizVert.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="747.0" layoutY="463.0" text="Label" textFill="#eefff5" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

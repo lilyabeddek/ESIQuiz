@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="holdPane" prefHeight="840.0" prefWidth="929.0" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersFormateur.AjoutModifFormationController">
+   <children>
+      <Label layoutX="188.0" layoutY="92.0" text="Créer une formation" textFill="#2eea96">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <VBox layoutX="189.0" layoutY="194.0" prefHeight="413.0" prefWidth="444.0">
+         <children>
+            <Label text="Titre :" textFill="#414040">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titreField" prefHeight="49.0" prefWidth="443.0" promptText="titre de la formation">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Description :" textFill="#414040">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="descriptionField" prefHeight="54.0" prefWidth="414.0" promptText="Cette formation vise à ...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+            </TextArea>
+            <Label text="Date de debut :" textFill="#414040">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateDebutField" prefHeight="46.0" prefWidth="446.0" promptText="JJ / MM / AAAA">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+            <Label text="Date de fin :" textFill="#414040">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateFinField" prefHeight="48.0" prefWidth="450.0" promptText="JJ / MM / AAAA">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+         </children>
+      </VBox>
+      <Button fx:id="suivEnregistrer" layoutX="314.0" layoutY="646.0" mnemonicParsing="false" onAction="#suivantClick" prefHeight="42.0" prefWidth="163.0" text="Suivant">
+         <styleClass>
+            <String fx:value="info" />
+            <String fx:value="action-btn" />
+         </styleClass></Button>
+      <Button fx:id="btnRevenirArriere" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#revenirArriere" prefHeight="32.0" prefWidth="154.0" style="-fx-border-color: #5bc0de;" styleClass="action-btn" text="&lt; Revenir en arrière" visible="false" />
+   </children>
+</AnchorPane>

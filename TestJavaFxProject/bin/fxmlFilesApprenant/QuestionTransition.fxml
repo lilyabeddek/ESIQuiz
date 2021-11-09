@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homepaneQuestion" prefHeight="831.0" prefWidth="900.0" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersApprenant.QuestionTransitionController">
+   <children>
+      <ListView fx:id="propositions" layoutX="253.0" layoutY="297.0" prefHeight="299.0" prefWidth="581.0" />
+      <Label fx:id="enonce" layoutX="118.0" layoutY="170.0" prefHeight="67.0" prefWidth="666.0" text="Label" textFill="#414040">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="suivant" layoutX="683.0" layoutY="680.0" mnemonicParsing="false" onAction="#suivant" prefHeight="32.0" prefWidth="150.0" text="Suivant">
+         <styleClass>
+            <String fx:value="action-btn" />
+            <String fx:value="info" />
+         </styleClass></Button>
+      <Label fx:id="reprecedente" layoutX="118.0" layoutY="242.0" prefHeight="35.0" prefWidth="666.0" textFill="#717171">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nota" layoutX="127.0" layoutY="611.0" prefHeight="46.0" prefWidth="630.0" textFill="#1e86fd">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="287.0" text="Réponse(s) :" textFill="#57e28e">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="118.0" layoutY="113.0" text="Q :" textFill="#57e28e">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <TextArea fx:id="txtproposition" layoutX="118.0" layoutY="344.0" prefHeight="110.0" prefWidth="526.0" promptText="Veuillez introduire votre réponse ici">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="titrePage" layoutX="118.0" layoutY="56.0" text="Répondre au quiz :" textFill="#06d585">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

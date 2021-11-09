@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="holdPane" prefHeight="840.0" prefWidth="930.0" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersFormateur.CreerModifQcmController">
+   <children>
+      <Label fx:id="titrePage" layoutX="107.0" layoutY="78.0" text="Ajout d'une question à choix multiples :" textFill="#06d585">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="enonce" layoutX="108.0" layoutY="194.0" prefHeight="46.0" prefWidth="594.0" promptText="L'encapsulation est l'un des principes fondamentaux de la POO :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="107.0" layoutY="155.0" text="Enoncé :" textFill="#696868">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="propVraie" layoutX="107.0" layoutY="295.0" prefHeight="46.0" prefWidth="374.0" promptText="Vrai">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="107.0" layoutY="261.0" text="Propositions correctes :" textFill="#595656">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewJust" layoutX="107.0" layoutY="359.0" prefHeight="138.0" prefWidth="704.0">
+         <columns>
+            <TableColumn fx:id="propJusteColumn" prefWidth="703.1999969482422" text="Propositions correctes " />
+         </columns>
+      </TableView>
+      <Button fx:id="btnAjoutPropFausse" layoutX="490.0" layoutY="547.0" mnemonicParsing="false" onAction="#ajouterPropFausseAction" prefHeight="46.0" prefWidth="47.0" style="-fx-background-color: #2eea96; -fx-border-color: #2eea96;" />
+      <Label fx:id="lblSuppPropJuste" layoutX="503.0" layoutY="539.0" onMouseClicked="#ajouterPropFausseMouse" prefHeight="35.0" prefWidth="25.0" text="+" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewFausse" layoutX="106.0" layoutY="609.0" prefHeight="138.0" prefWidth="704.0">
+         <columns>
+            <TableColumn fx:id="propFausseColumn" prefWidth="703.1999969482422" text="Propositions fausses" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnAjoutPropJuste" layoutX="490.0" layoutY="295.0" mnemonicParsing="false" onAction="#ajouterPropVraieAction" prefHeight="46.0" prefWidth="47.0" style="-fx-background-color: #2eea96; -fx-border-color: #2eea96;" />
+      <Label fx:id="lblAjoutPropJuste" layoutX="503.0" layoutY="288.0" onMouseClicked="#ajouterPropVraieMouse" prefHeight="35.0" prefWidth="25.0" text="+" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="propFausse" layoutX="107.0" layoutY="547.0" prefHeight="46.0" prefWidth="374.0" promptText="Faux">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="107.0" layoutY="509.0" text="Propositions fausses :" textFill="#595656">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSuppPropFausse" layoutX="718.0" layoutY="546.0" mnemonicParsing="false" onAction="#supprimerPropFausse" prefHeight="46.0" prefWidth="93.0" text="Supprimer">
+         <styleClass>
+            <String fx:value="danger" />
+            <String fx:value="action-btn" />
+         </styleClass></Button>
+      <Button fx:id="btnSuppPropJuste" layoutX="717.0" layoutY="295.0" mnemonicParsing="false" onAction="#supprimerPropVraie" prefHeight="46.0" prefWidth="94.0" text="Supprimer">
+         <styleClass>
+            <String fx:value="danger" />
+            <String fx:value="action-btn" />
+         </styleClass></Button>
+      <Button layoutX="31.0" layoutY="28.0" mnemonicParsing="false" onAction="#revenirArriere" prefHeight="32.0" prefWidth="145.0" style="-fx-border-color: #5bc0de;" styleClass="action-btn" text="&lt; Revenir en arrière" />
+      <Button fx:id="BtnEnregistrer" layoutX="715.0" layoutY="195.0" mnemonicParsing="false" onAction="#enregister" prefHeight="46.0" prefWidth="94.0" text="Enregister">
+         <styleClass>
+            <String fx:value="action-btn" />
+            <String fx:value="info" />
+         </styleClass></Button>
+      <Label fx:id="enonceText" layoutX="108.0" layoutY="204.0" text="Enoncé :" textFill="#696868" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

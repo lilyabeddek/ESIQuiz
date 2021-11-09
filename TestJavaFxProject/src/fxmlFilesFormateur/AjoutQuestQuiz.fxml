@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="328.0" prefWidth="556.0" style="-fx-background-color: #ffffff;" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersFormateur.AjoutQuestQuizController">
+   <children>
+      <Label layoutX="31.0" layoutY="27.0" prefHeight="38.0" prefWidth="278.0" text="Ajout d'une question :" textFill="#3ee594">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBox" layoutX="104.0" layoutY="156.0" prefHeight="42.0" prefWidth="326.0" />
+      <Label layoutX="101.0" layoutY="91.0" prefHeight="35.0" prefWidth="432.0" text="Veillez choisir le notion sur laquelle va porter" textFill="#545755">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="112.0" prefHeight="35.0" prefWidth="128.0" text="la question :" textFill="#545755">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="valider" layoutX="209.0" layoutY="235.0" mnemonicParsing="false" onAction="#Enregistrer" prefHeight="32.0" prefWidth="128.0" text="Valider">
+         <styleClass>
+            <String fx:value="info" />
+            <String fx:value="action-btn" />
+         </styleClass></Button>
+      <Circle fill="#ea5b5b" layoutX="526.0" layoutY="30.0" onMouseClicked="#fermer" radius="16.0" stroke="#ea5b5b" strokeType="INSIDE" />
+      <Label layoutX="520.0" layoutY="16.0" onMouseClicked="#fermer" prefHeight="18.0" prefWidth="16.0" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <InnerShadow color="#494949" />
+   </effect>
+</AnchorPane>

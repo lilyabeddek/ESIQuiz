@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="holdPane" prefHeight="830.0" prefWidth="930.0" style="-fx-background-color: #ffffff;" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersFormateur.VisualiserFormationController">
+   <children>
+      <TableView fx:id="tableView" layoutX="84.0" layoutY="319.0" prefHeight="439.0" prefWidth="766.0">
+        <columns>
+          <TableColumn fx:id="titreColumn" onEditCommit="#changerTitreNotionCell" prefWidth="765.5999893188476" text="Titre" />
+        </columns>
+      </TableView>
+      <Label layoutX="81.0" layoutY="21.0" text="Gestion de la formation" textFill="#06d585">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="75.0" text="Titre :" textFill="#646060">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="titreFormation" layoutX="144.0" layoutY="75.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="582.0" layoutY="72.0" text="Date début :" textFill="#646060">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateDebut" layoutX="755.0" layoutY="72.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="582.0" layoutY="109.0" text="Date fin :" textFill="#646060">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateFin" layoutX="755.0" layoutY="109.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="185.0" text="Liste des Notions" textFill="#06d585">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSupprimerNotion" layoutX="560.0" layoutY="775.0" mnemonicParsing="false" onAction="#supprimerNotion" prefHeight="38.0" prefWidth="126.0" text="Supprimer">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="action-btn" />
+            <String fx:value="danger" />
+         </styleClass>
+      </Button>
+      <TextField fx:id="titreNotion" layoutX="82.0" layoutY="265.0" prefHeight="38.0" prefWidth="361.0" promptText="exp : Les fibres optiques">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnAjouterNotion" layoutX="454.0" layoutY="266.0" minWidth="42.0" mnemonicParsing="false" onAction="#ajouterNotionAction" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #5bc0de; -fx-border-color: #5bc0de;" />
+      <Button fx:id="btnAfficherDetails" layoutX="697.0" layoutY="774.0" mnemonicParsing="false" onAction="#afficherNotion" prefHeight="38.0" prefWidth="156.0" text="Afficher les details">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="info" />
+            <String fx:value="action-btn" />
+         </styleClass>
+      </Button>
+      <Label layoutX="82.0" layoutY="106.0" text="Description :" textFill="#646060">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="226.0" text="Titre :" textFill="#696868">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAjouterNotion" layoutX="465.0" layoutY="258.0" onMouseClicked="#ajouterNotionMouse" prefHeight="35.0" prefWidth="25.0" text="+" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnModifierFormation" layoutX="369.0" layoutY="24.0" mnemonicParsing="false" onAction="#modifierFormation" prefHeight="26.0" prefWidth="38.0">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../photos/edit%20(3).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="description" layoutX="82.0" layoutY="149.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
